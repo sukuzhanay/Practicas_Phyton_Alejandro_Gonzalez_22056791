@@ -1,0 +1,10 @@
+[user]
+	email = 22056791@live.uem.es
+	name = Alejxx
+[core]
+	longpaths = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
