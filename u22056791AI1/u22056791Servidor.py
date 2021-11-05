@@ -44,7 +44,7 @@ class Servidor():
 		for c in self.clientes:
 			try:
 				f = open("u22056791.txt")
-				f.write(cliente + msg)
+				f.write(msg)
 				f.close("u22056791.txt")
 				if c != cliente:
 					c.send(msg)

@@ -17,12 +17,12 @@ class Cliente():
 			print("Hilo: " + thread.name + "\n" + "Proceso PID: "+ str(os.getpid()) + "\n" + "Daemon: " + str(thread.daemon) +  "\n")
 			print("Hilos totales: " + str(threading.activeCount()-1))
 
-		self.enviar("Ha aparecido " + username_ + "en la sala de chat")
+		self.enviar("Ha aparecido " + username_ + " en la sala de chat")
 		while True:
 			# msg = input('\nEscriba texto ? ** Enviar = ENTER ** Abandonar Chat = Q \n')
-			msg = input("\n>>\n")
+			msg = username_ + ": " + input("\n>>\n")
 			if msg != 'Q' :
-				self.enviar(username_ + ": " + msg)
+				self.enviar(msg)
 			else:
 				print(" **** Ha abandonado el chat ****" + username_)
 				self.sock.close()
