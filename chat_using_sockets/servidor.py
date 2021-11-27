@@ -3,6 +3,7 @@ import threading
 import sys
 import pickle
 import os
+import pyrebase as py
 
 class Servidor():
 	def __init__(self, host=socket.gethostname(), port=59989):
