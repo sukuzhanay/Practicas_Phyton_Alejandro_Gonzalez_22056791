@@ -1,3 +1,4 @@
+import pyrebase as py
 import threading
 import sys
 import socket
@@ -17,13 +18,12 @@ firebaseConfig = {
 firebase = py.initialize_app(firebaseConfig)
 ddbb = firebase.database()
 sign_up_in=firebase.auth()
-sign_up_in.send_email_verification(user['idToken'])
 
 class Cliente():
 
 	def __init__(self, host=socket.gethostname(), port=59989):
 		self.sock = socket.socket()
-		username_ = "22056791"
+		username_ = "220567910"
 		self.sock.connect((str(host), int(port)))
 		hilo_recv_mensaje = threading.Thread(target=self.recibir)
 		hilo_recv_mensaje.daemon = True
@@ -37,7 +37,10 @@ class Cliente():
 		while True:
 			# msg = input('\nEscriba texto ? ** Enviar = ENTER ** Abandonar Chat = Q \n')
 			msg = username_ + ": " + input("\n>>\n")
-			ddbb.child("repasoParcial/22056791/22056790").push(msg)
+			ddbb.child("22056791/cliente1/220567910").push(msg)
+			try:
+				with open("22056791.txt", "a+") as msgesc:
+					msgesc.write(nickname + ": " + msg + "\n")
 			if msg != 'Q' :
 				self.enviar(msg)
 			else:
@@ -61,4 +64,3 @@ class Cliente():
 			print(pickle.loads(data))
 
 c = Cliente()
-

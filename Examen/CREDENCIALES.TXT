@@ -1,0 +1,11 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAfMJEIxKfVX_eKTrIoVdXg09QY9USMlzc",
+  authDomain: "functions-real-case-pbi.firebaseapp.com",
+  databaseURL: "https://functions-real-case-pbi-default-rtdb.firebaseio.com",
+  projectId: "functions-real-case-pbi",
+  storageBucket: "functions-real-case-pbi.appspot.com",
+  messagingSenderId: "212033978800",
+  appId: "1:212033978800:web:e1d63004db5d6c6fe89675",
+  measurementId: "G-N23MB60FQV"
+};
